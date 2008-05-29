@@ -1,0 +1,10 @@
+    # tracker validation sequences
+    #
+    include "Validation/TrackerHits/data/trackerHitsValidation.cff"
+    include "Validation/TrackerDigis/data/trackerDigisValidation.cff"
+    include "Validation/TrackerRecHits/data/trackerRecHitsValidation.cff"
+    include "Validation/TrackingMCTruth/data/trackingTruthValidation.cfi"
+    include "Validation/RecoTrack/data/TrackValidation.cff"
+    include "Validation/RecoTrack/data/SiTrackingRecHitsValid.cff" 
+    
+    sequence trackerSimValid  = { trackerHitsValidation & trackerDigisValidation & trackerRecHitsValidation & trackingTruthValid & tracksValidation & trackingRecHitsValid }	

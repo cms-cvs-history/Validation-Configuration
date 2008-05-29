@@ -1,0 +1,8 @@
+    # HCAL validation sequences
+    #
+    include "Validation/HcalHits/data/HcalSimHitStudy.cfi"
+    include "Validation/HcalDigis/data/hcalDigisValidationSequence.cff"
+    include "Validation/HcalRecHits/data/hcalRecHitsValidationSequence.cff"
+    include "Validation/CaloTowers/data/calotowersValidationSequence.cff"
+
+    sequence hcalSimValid    = { hcalSimHitStudy & hcalDigisValidationSequence & hcalRecHitsValidationSequence & calotowersValidationSequence }

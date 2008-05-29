@@ -1,0 +1,5 @@
+cmsDriver.py SingleGammaE120EHCAL.cfi -s GEN,SIM,DIGI,RECO,DQM --eventcontent FEVTSIMDIGI --beamspot NoSmear --customise Validation/Configuration/SingleGammaE120_ECALHCAL.py
+cmsDriver.py SinglePiPt60EHCAL.cfi -s GEN,SIM,DIGI,RECO,DQM --eventcontent FEVTSIMDIGI --beamspot NoSmear --customise Validation/Configuration/SinglePionPt60_ECALHCAL.py
+cmsDriver.py SinglePiE30HCAL.cfi -s GEN,SIM,DIGI,RECO,DQM --eventcontent FEVTSIMDIGI --beamspot NoSmear --customise Validation/Configuration/SinglePionE30_HCAL.py
+cmsDriver.py SinglePiE500HCAL.cfi -s GEN,SIM,DIGI,RECO,DQM --eventcontent FEVTSIMDIGI --beamspot NoSmear --customise Validation/Configuration/SinglePionE500_HCAL.py
+cmsDriver.py SingleMuPt10.cfi -s GEN,SIM,DIGI,L1,DIGI2RAW,RAW2DIGI,RECO:reconstruction_withRS,DQM --eventcontent FEVTSIMDIGI --beamspot NoSmear --customise Validation/Configuration/SingleMuPt10.py
