@@ -5,4 +5,5 @@
     include "Validation/EcalRecHits/data/ecalRecHitsValidationSequence.cff"
     include "Validation/EcalClusters/data/ecalClustersValidationSequence.cff"
     
-    sequence ecalSimValid  = { ecalSimHitsValidationSequence & ecalDigisValidationSequence & ecalRecHitsValidationSequence & ecalClustersValidationSequence }	
+    # sequence ecalSimValid  = { ecalSimHitsValidationSequence & ecalDigisValidationSequence & ecalRecHitsValidationSequence & ecalClustersValidationSequence }	
+    sequence ecalSimValid  = { ecalSimHitsValidationSequence & ecalDigisValidationSequence & ecalRecHitsValidationSequence }
