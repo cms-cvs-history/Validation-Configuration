@@ -1,7 +1,0 @@
-    # muon validation sequences
-    include "Validation/MuonHits/data/muonHitsValidation.cfi"
-    include "Validation/MuonDTDigis/data/dtDigiValidation.cfi"
-    include "Validation/MuonCSCDigis/data/cscDigiValidation.cfi"
-    include "Validation/MuonRPCDigis/data/validationMuonRPCDigis.cfi"
-
-    sequence muonSimValid    = { validSimHit & muondtdigianalyzer & cscDigiValidation & validationMuonRPCDigis }

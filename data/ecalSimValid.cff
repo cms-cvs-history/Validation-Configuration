@@ -1,7 +1,0 @@
-    # ECAL validation sequences
-    #
-    include "Validation/EcalHits/data/ecalSimHitsValidationSequence.cff"
-    include "Validation/EcalDigis/data/ecalDigisValidationSequence.cff"
-    include "Validation/EcalRecHits/data/ecalRecHitsValidationSequence.cff"
-    
-    sequence ecalSimValid  = { ecalSimHitsValidationSequence & ecalDigisValidationSequence & ecalRecHitsValidationSequence }
