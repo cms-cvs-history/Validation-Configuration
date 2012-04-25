@@ -28,8 +28,8 @@ def customise(process):
 
     # modify the content
 
-    #process.output.outputCommands.append("keep *_simHcalUnsuppressedDigis_*_*")
-    process.outputModules_().iteritems().next()[1].outputCommands.append("keep *_simHcalUnsuppressedDigis_*_*")
+    #process.output.outputCommands.append("keep *_mix_simHcalUnsuppressedDigis*_*")
+    process.outputModules_().iteritems().next()[1].outputCommands.append("keep *_mix_simHcalUnsuppressedDigis*_*")
             
 # user schedule: use only calorimeters digitization and local reconstruction
 
@@ -45,9 +45,9 @@ def customise(process):
     delattr(process,"hbhereco")
     process.hbhereco = process.hbheprereco.clone()
     process.hcalLocalRecoSequence.replace(process.hbheprereco,process.hbhereco)
-    process.hbhereco.digiLabel = cms.InputTag("simHcalUnsuppressedDigis")
-    process.horeco.digiLabel = cms.InputTag("simHcalUnsuppressedDigis")
-    process.hfreco.digiLabel = cms.InputTag("simHcalUnsuppressedDigis")
+    process.hbhereco.digiLabel = cms.InputTag("mix", "simHcalUnsuppressedDigis")
+    process.horeco.digiLabel = cms.InputTag("mix", "simHcalUnsuppressedDigis")
+    process.hfreco.digiLabel = cms.InputTag("mix", "simHcalUnsuppressedDigis")
     process.ecalRecHit.recoverEBIsolatedChannels = cms.bool(False)
     process.ecalRecHit.recoverEEIsolatedChannels = cms.bool(False)
     process.ecalRecHit.recoverEBFE = cms.bool(False)
