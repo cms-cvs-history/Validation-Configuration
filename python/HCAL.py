@@ -16,7 +16,7 @@ def customise(process):
 
 # modify the content
 
-    process.output.outputCommands.append("keep *_mix_simHcalUnsuppressedDigis*_*")
+    process.output.outputCommands.append("keep *_simHcalUnsuppressedDigis_*_*")
 
 # user schedule: use only calorimeters digitization and local reconstruction
 
@@ -28,9 +28,9 @@ def customise(process):
     delattr(process,"hbhereco")
     process.hbhereco = process.hbheprereco.clone()
     process.hcalLocalRecoSequence.replace(process.hbheprereco,process.hbhereco)
-    process.hbhereco.digiLabel = cms.InputTag("mix", "simHcalUnsuppressedDigis")
-    process.horeco.digiLabel = cms.InputTag("mix", "simHcalUnsuppressedDigis")
-    process.hfreco.digiLabel = cms.InputTag("mix", "simHcalUnsuppressedDigis")
+    process.hbhereco.digiLabel = cms.InputTag("simHcalUnsuppressedDigis")
+    process.horeco.digiLabel = cms.InputTag("simHcalUnsuppressedDigis")
+    process.hfreco.digiLabel = cms.InputTag("simHcalUnsuppressedDigis")
 
     process.local_digireco = cms.Path(process.mix * process.hcalDigiSequence * process.hbhereco * process.hfreco * process.horeco )
 
